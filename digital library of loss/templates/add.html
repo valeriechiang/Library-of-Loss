@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<script type="text/javascript" src="{{ url_for('static', filename = 'add.js') }}"></script>
+
+<header>
+    <div class="overlay">
+        <h1>Add an Entry</h1>
+    </div>
+</header>
+
+
+<div class="container" id="result">
+    <div class="warningdiv" id="success"></div>
+    <div class="row">
+        <div class="col-md-4" id="col1">
+            <!-- input name -->
+            <input type="text" id="inputname" placeholder="Entry Title">
+            <div class="warningdiv" id="namewarning"></div>
+            <!-- input image+alt text -->
+            <input type="url" id="inputimg" placeholder="Image Source Link">
+            <div class="warningdiv" id="imagewarning"></div>
+        </div>
+        <div class="col-md-4">
+            <!-- input about -->
+            <input type="text" id="inputabout" placeholder="Explanation">
+            <div class="warningdiv" id="aboutwarning"></div>
+            <!-- input Yelp Rating -->
+        </div>
+        <div class="col-md-4">
+            <!-- input Must Try Dishes -->
+            <input type="text" id="inputdishes" placeholder="Quote">
+            <div class="warningdiv" id="disheswarning"></div>
+        </div>
+    </div>
+    <br>
+    <button type="button" id="submit">Submit Entry</button>
+</div>
+
+{% endblock %}

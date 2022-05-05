@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<script type="text/javascript" src="{{ url_for('static', filename = 'view.js') }}"></script>
+
+<header>
+    <div class="overlay">
+        <h1>{{view_item.title}}</h1>
+    </div>
+</header>
+
+<div class="container" id="result">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="{{view_item.image}}" alt={{view_item.alt}}>
+        </div>
+        <div class="col-md-4">
+            {{view_item.About}}
+        </div>
+        <div class="col-md-4">
+            <b>Quote: </b>{{view_item.Quote}}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

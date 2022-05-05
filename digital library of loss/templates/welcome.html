@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<div class="container">
+    <header>
+        <div class="overlay">
+            <h1>Welcome to my Digital Library of Loss</h1>
+        </div>
+    </header>
+    <div class="row">   
+        <div id=food1 class="col-md-4">
+            <img src="{{food.image}}" width=auto height="200">
+            <br>{{food.title}}
+        </div>
+        <div id=food2 class="col-md-4">
+            <img src="{{food2.image}}" width=auto height="200">
+            <br>
+            {{food2.title}}
+        </div>
+        <div id=food3 class="col-md-4">
+            <img src="{{food3.image}}" width=auto height="200">
+            <br>
+            {{food3.title}}
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

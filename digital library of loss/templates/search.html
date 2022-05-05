@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+    <script type="text/javascript" src="{{ url_for('static', filename = 'search.js') }}"></script>
+    <script>
+        let keyword = {{keyword|tojson}}
+    </script>
+
+    <header>
+        <div class="overlay">
+            <h1>Search Results:{{matches}}</h1>
+        </div>
+    </header>
+    
+    <div id="results">   
+        <ul > 
+            {% for item in searchresults %}
+                <div id=food{{item.id}} class="entry">
+                    <li class="listitem"><div id="searchlist">{{item.title}}</div>
+                    </li>
+
+                    <img src="{{item.image}}">
+                    
+                </div>
+            {% endfor %}
+        </ul>
+        
+    </div>
+
+
+
+
+{% endblock %}
